@@ -71,8 +71,8 @@ class LSTM_Model:
 
     def training(self, epo, l2_norm=True, continue_training=False):
         #실험하는 컴퓨터 환경에 맞게 수정하세요
-        save_path = 'C:\\Users\\USER\\Desktop\\rating_movies\\my_model'
-
+        save_path = './rating_movies/my_model'
+	
         with tf.Session() as sess:
             prediction = self.forward()
 
@@ -117,8 +117,8 @@ class LSTM_Model:
 
     def evaluation(self):
         # 실험하는 컴퓨터 환경에 맞게 수정하세요
-        save_path = 'C:\\Users\\USER\\Desktop\\rating_movies\\my_model'
-
+        save_path = './rating_movies/my_model'
+	#save_path = './rating_movies/my_model'
         with tf.Session() as sess:
             prediction = self.forward()
             prediction_idx = tf.argmax(prediction, axis=1)
@@ -147,4 +147,4 @@ class LSTM_Model:
                         cor += 1
                     cnt += 1
 
-        print('학번과 이름을 출력하세요', cor, '/', cnt)
+        print('201624642 kimnamque', cor, '/', cnt)
